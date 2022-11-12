@@ -260,6 +260,10 @@ main{
     header{
         margin: 1rem;
     }
+    .hero{
+        
+        gap: 4rem;
+    }
 
 }
 @media (max-width:300px){
