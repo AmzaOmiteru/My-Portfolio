@@ -3,10 +3,9 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #E9D79E;
-    animation-duration: 1s;
 }
-.intro-anim{
-    animation-name: intro;
+.op{
+    opacity: 0;
 }
 @keyframes intro {
     0%{

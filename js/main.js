@@ -59,11 +59,6 @@ document.querySelectorAll('.char').forEach(element => {
         
     } 
 });
-document.querySelectorAll('.char').forEach(element => {
-    
-    let color = 'green'
-   
-});
 // control Button test
 const btn1 = document.querySelector('[btn]')
 btn1.onclick = ()=>{
@@ -168,8 +163,7 @@ box.onmouseleave = ()=>{
 
 
 
-
-// fadeinfrom leftanimation
+// Scale up animation
 const objects = document.querySelectorAll('[fadeinl-anim]').forEach((element)=>{
     console.log(element);
     element.onmouseenter = ()=>{
@@ -185,3 +179,6 @@ const objects = document.querySelectorAll('[fadeinl-anim]').forEach((element)=>{
         })
     }
 })
+
+
+// fadeinfrom leftanimation

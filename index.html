@@ -17,14 +17,7 @@
 </head>
 <body>
     <script>
-        document.body.onloadstart = ()=>{
-            document.body.style.opacity = 0;
-        }
-        setTimeout(() => {
-            document.body.onload = ()=>{
-            document.body.style.opacity = 1;
-        }
-        }, 1000);
+        document.querySelector('body').classList.add('op')
     </script>
     <div class=" pg container">
         
@@ -117,5 +110,10 @@
     -->
     
     <script src="js/main.js"></script>
+    <script>
+        setTimeout(() => {
+            document.querySelector('body').classList.remove('op')
+        }, 200);
+    </script>
 </body>
 </html>
