@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- TODO: Delete before deployment -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <!-- end TODO -->
+
+    <!--TODO: Uncomment this before deployment 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
+    -->
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+        document.body.onloadstart = ()=>{
+            document.body.style.opacity = 0;
+        }
+        setTimeout(() => {
+            document.body.onload = ()=>{
+            document.body.style.opacity = 1;
+        }
+        }, 1000);
+    </script>
+    <div class=" pg container">
+        
+        <!-- test -->
+        <header class="navbar">
+            <div class="logo col">
+              <img logo src="img/logo.svg" alt="Logo of the company">
+              Amza Omiteru
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#MenuBar" aria-controls="MenuBar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="col">
+              <ul>
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">Work</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+              </ul>
+            </nav>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="MenuBar" aria-labelledby="MenuBarLabel">
+                <div class="offcanvas-header">
+                    <span></span>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+          </header>
+
+        <main>
+            <div class="row hero">
+                <div class="col-12 col-lg-6">
+                    <div class="d">
+                        <p class="h-txt hh">Hi,<span autofocus title="please click me" class="ed" contenteditable="true"></span></p>
+                    </div>
+                    <div class="d">
+                        <p class="h-txt hp">I am a web designer and developer .</p>
+                    </div>
+                </div>
+                <div class="hse col-12 col-lg-6">
+                    <div fadeinl-anim class="img-c"><img src="img/profile.png" alt="Profile illustration" class="img-fluid"></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+    <!-- Testing -->
+    <training>
+        <div class="d">
+            <p class="h-txt hh">Hi,<span autofocus title="please click me" class="ed" contenteditable="true"></span></p>
+        </div>
+        <div class="d">
+            <p class="h-txt hp">I am a web developer and designer.</p>
+        </div>
+        <div class="d">
+            <p strb-anim class="h-txt hq">testing</p>
+        </div>
+        <div class="d-flex">
+            <div class="box"></div>
+        </div>
+        <button btn type-anim class="btn btn-primary">Click</button>
+        <button btn1 class="btn btn-primary">Click play</button>
+    </training>
+
+
+    
+    <!-- TODO: Delete before deployment -->
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/splittype.min.js"></script>
+    <script src="js/gsap/gsap.min.js"></script>
+    <script src="js/gsap/TextPlugin.min.js"></script>
+    <script src="js/gsap/ScrollTrigger.min.js"></script>
+    <!-- end TODO -->
+    <!-- TODO: Uncomment this section
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+    
+    -->
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
