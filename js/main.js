@@ -8,7 +8,7 @@ const secondary = '#4b8007'
 
 // Reveal by word Animation
 const hh = (parent)=>{
-    gsap.from('.hh', {
+    gsap.from('[rbword]', {
         scrollTrigger: `${parent}`,
         duration: 1, 
         y: '5em',
@@ -33,7 +33,6 @@ const hp = (parent)=>{
         ease: "back.inOut(1.5)"
     });
 }
-hp('training')
 hp('.hero')
 // end
 
@@ -164,11 +163,10 @@ box.onmouseleave = ()=>{
 
 
 // Scale up animation
-const objects = document.querySelectorAll('[fadeinl-anim]').forEach((element)=>{
-    console.log(element);
+document.querySelectorAll('[scaleup-anim]').forEach((element)=>{
     element.onmouseenter = ()=>{
         gsap.to(element, {
-            transform: 'scale(1.2)'
+            transform: 'scale(1.1)'
             
         })
     }
@@ -181,4 +179,9 @@ const objects = document.querySelectorAll('[fadeinl-anim]').forEach((element)=>{
 })
 
 
-// fadeinfrom leftanimation
+// fadeinfromleft Animation
+const fadeLeft = document.querySelectorAll('[fadeLeft]').forEach(element=>{
+    gsap.from(element, {
+        scrollTrigger: element,
+    })
+})
