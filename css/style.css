@@ -218,6 +218,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+.hero-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .img-c img{
     max-width: 30em;
     z-index: 1;
