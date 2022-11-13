@@ -34,6 +34,7 @@ const hp = (parent)=>{
     });
 }
 hp('.hero')
+hp('.section h2')
 // end
 
 // OnHover Animation

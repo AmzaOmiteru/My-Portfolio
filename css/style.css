@@ -240,6 +240,11 @@ body{
     height: 100%;
 }
 
+/* Sections */
+.section{
+    margin-top: 5vh;
+}
+
 
 
 
