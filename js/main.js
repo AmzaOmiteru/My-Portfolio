@@ -19,7 +19,7 @@ hh('.hero')
 // end
 
 // Reveal by letter animation
-const htext = new SplitType('.hp', { types: ['line', 'chars'] })
+const htext = new SplitType('.hp', { types: ['line', 'word', 'char'] })
 
 const hp = (parent)=>{
     gsap.from(`${parent} .char`, {
@@ -103,12 +103,12 @@ hq.forEach(element => {
 // Typing Animation with cursor
 gsap.to('[type-anim]', {
     repeat: -1,
+    scrollTrigger: '[type-anim]',
     keyframes : [
         {
             duration: 4,
             text: {
                 value: "dont click me",
-                newClass: "class2",
                 delimiter: "",
                 
             },
@@ -118,7 +118,6 @@ gsap.to('[type-anim]', {
             duration: 4,
             text: {
                 value: "ok, now click me",
-                newClass: "class2",
                 delimiter: "",
                 
             },
@@ -128,7 +127,6 @@ gsap.to('[type-anim]', {
             duration: 2,
             text: {
                 value: "Click",
-                newClass: "class2",
                 delimiter: "",
                 
             },
@@ -178,10 +176,20 @@ document.querySelectorAll('[scaleup-anim]').forEach((element)=>{
     }
 })
 
-
-// fadeinfromleft Animation
-const fadeLeft = document.querySelectorAll('[fadeLeft]').forEach(element=>{
+// fadein animation
+const fadeinO = document.querySelectorAll('[fadein-anim]')
+fadeinO.forEach(element=>{
     gsap.from(element, {
-        scrollTrigger: element,
+        duration:0.6,
+        scrollTrigger: '[fadein-anim]',
+        opacity:0,
+        marginBottom: '-4rem'
     })
+})
+
+// bounce in Animation
+gsap.from('header', {
+    duration: 2,
+    marginTop:'-10rem',
+    opacity: 0
 })
