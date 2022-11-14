@@ -5,6 +5,41 @@ const primary = '#018bc7'
 const secondary = '#4b8007'
 
 
+// boouncy padding animation
+const bouncyA = (obj)=>{
+    obj.onmouseenter = ()=>{
+        gsap.to(obj, {
+            duration: 1,
+            padding: '1rem 2rem',
+            ease: 'elastic.out(1.5,0.3)'
+    })
+}
+obj.onmouseleave = ()=>{
+    gsap.to(obj, {
+        duration: 1,
+        padding: '0.5rem 1rem',
+        ease: 'elastic.out(1.5,0.5)'
+    })
+}
+}
+const seeM = document.querySelectorAll('.conc a')
+seeM.forEach((ele=>{bouncyA(ele)}))
+
+
+
+// fade from bottom animation
+const fadeFB = (section, delay)=>{
+    gsap.from(section, {
+        duration:1,
+        scrollTrigger: section,
+        opacity: 0,
+        y: 50,
+        delay: delay,
+    })
+}
+fadeFB('.skills', 0)
+fadeFB('.portfolio', 0)
+
 
 // Reveal by word Animation
 const hh = (parent)=>{
@@ -21,7 +56,7 @@ hh('.hero')
 // Reveal by letter animation
 const htext = new SplitType('.hp', { types: ['line', 'word', 'char'] })
 
-const hp = (parent)=>{
+const hp = (parent, del)=>{
     gsap.from(`${parent} .char`, {
         scrollTrigger: {
             trigger: `${parent}`,
@@ -29,12 +64,15 @@ const hp = (parent)=>{
         duration: 1, 
         y: '5em',
         stagger: 0.05,
-        delay: 0.7,
+        delay: del,
         ease: "back.inOut(1.5)"
     });
 }
-hp('.hero')
-hp('.section h2')
+hp('.hero', 0.7)
+hp('.skills h2', 0)
+hp('.portfolio h2', 0)
+const offc = new SplitType('.offcanvas a', { types: ['line', 'word', 'char'] })
+document.querySelector('[navbtn]').onclick = ()=>{hp('.offcanvas', 0)}
 // end
 
 // OnHover Animation
@@ -59,17 +97,7 @@ document.querySelectorAll('.char').forEach(element => {
         
     } 
 });
-// control Button test
-const btn1 = document.querySelector('[btn]')
-btn1.onclick = ()=>{
-    hp.reverse()
-    hh.reverse()
-}
-const btn2 = document.querySelector('[btn1]')
-btn2.onclick = ()=>{
-    hp.play()
-    hh.play()
-}
+
 
 
 
@@ -86,7 +114,7 @@ hq.forEach(element => {
                 {
                     duration: 0.3,
                     transform: 'scale(1.25, 0.75)',
-                    ease: 'ease: "power4.in"',
+                    ease: "power4.in",
                 },
                 {
                     duration: 1,
@@ -102,39 +130,39 @@ hq.forEach(element => {
 
 
 // Typing Animation with cursor
-gsap.to('[type-anim]', {
-    repeat: -1,
-    scrollTrigger: '[type-anim]',
-    keyframes : [
-        {
-            duration: 4,
-            text: {
-                value: "dont click me",
-                delimiter: "",
+// gsap.to('[type-anim]', {
+//     repeat: -1,
+//     scrollTrigger: '[type-anim]',
+//     keyframes : [
+//         {
+//             duration: 4,
+//             text: {
+//                 value: "dont click me",
+//                 delimiter: "",
                 
-            },
-            delay: 4
-        },
-        {
-            duration: 4,
-            text: {
-                value: "ok, now click me",
-                delimiter: "",
+//             },
+//             delay: 4
+//         },
+//         {
+//             duration: 4,
+//             text: {
+//                 value: "ok, now click me",
+//                 delimiter: "",
                 
-            },
-            delay: 4
-        },
-        {
-            duration: 2,
-            text: {
-                value: "Click",
-                delimiter: "",
+//             },
+//             delay: 4
+//         },
+//         {
+//             duration: 2,
+//             text: {
+//                 value: "Click",
+//                 delimiter: "",
                 
-            },
-            delay:2
-        },
-    ]
-});
+//             },
+//             delay:2
+//         },
+//     ]
+// });
 // end
 
 
@@ -165,7 +193,7 @@ box.onmouseleave = ()=>{
 document.querySelectorAll('[scaleup-anim]').forEach((element)=>{
     element.onmouseenter = ()=>{
         gsap.to(element, {
-            transform: 'scale(1.1)'
+            transform: 'scale(1.05)'
             
         })
     }
@@ -181,7 +209,7 @@ document.querySelectorAll('[scaleup-anim]').forEach((element)=>{
 const fadeinO = document.querySelectorAll('[fadein-anim]')
 fadeinO.forEach(element=>{
     gsap.from(element, {
-        duration:0.6,
+        duration:1,
         scrollTrigger: '[fadein-anim]',
         opacity:0,
         marginBottom: '-4rem'
@@ -189,8 +217,15 @@ fadeinO.forEach(element=>{
 })
 
 // bounce in Animation
-gsap.from('header', {
-    duration: 2,
+gsap.fromTo('header', {
     marginTop:'-10rem',
     opacity: 0
-})
+},
+{
+    duration: 2,
+    marginTop: '2.5rem',
+    opacity:1
+}
+)
+
+

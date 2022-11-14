@@ -21,60 +21,125 @@
 <body class="op">
     <div class=" pg container">
         
-        <!-- Header -->
-        <header class="navbar">
-            <div class="logo col">
-              <img logo src="img/logo.svg" alt="Logo of the company">
-              Amza Omiteru
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#MenuBar" aria-controls="MenuBar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="col">
-              <ul>
-                <li><a class="nav-link" href="#">Home</a></li>
-                <li><a class="nav-link" href="#">Work</a></li>
-                <li><a class="nav-link" href="#">About</a></li>
-                <li><a class="nav-link" href="#">Contact</a></li>
-              </ul>
-            </nav>
-            
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="MenuBar" aria-labelledby="MenuBarLabel">
-                <div class="offcanvas-header">
-                    <span></span>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </header>
-
+        
         <main>
-            <div class="row hero">
-                <div class="col-12 col-lg-6 hero-col ">
-                    <div class="d">
-                        <p class="h-txt hh" rbword>Hi, I am</p>
+            <!-- Header & Hero -->
+            <div class="scr1">
+                <header class="navbar">
+                    <div class="logo col">
+                      <img logo src="img/myAvatar.svg" alt="Logo of the company">
+                      Amza Omiteru
                     </div>
-                    <div class="d">
-                        <h1 class="h-txt hp">Amza Omiteru,</h1>
+                    <button navbtn class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#MenuBar" aria-controls="MenuBar">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <nav class="col">
+                        <ul>
+                            <li><a class="nav-link" href="#">Home</a></li>
+                            <li><a class="nav-link" href="#">Work</a></li>
+                            <li><a class="nav-link" href="#">About</a></li>
+                            <li><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="MenuBar" aria-labelledby="MenuBarLabel">
+                        <div class="offcanvas-header">
+                            <span></span>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
                     </div>
-                    <div class="d">
-                        <p class="h-stxt hp">I am a web designer and developer .</p>
+                </header>
+                <div class="row hero">
+                    <div class="col-12 col-lg-6 hero-col ">
+                        <div class="d">
+                            <p class="h-txt hh" rbword>Hi, I am</p>
+                        </div>
+                        <div class="d">
+                            <h1 class="h-txt hp">Amza Omiteru,</h1>
+                        </div>
+                        <div class="d">
+                            <p class="h-stxt hp">I am a web designer and developer .</p>
+                        </div>
+                    </div>
+                    <div class="hse col-12 col-lg-6 hero-col">
+                        <div scaleup-anim class="img-c">
+                            <img fadein-anim src="img/myAvatar.svg" alt="Profile illustration" class="img-fluid">
+                        </div>
                     </div>
                 </div>
-                <div class="hse col-12 col-lg-6 hero-col">
-                    <div scaleup-anim class="img-c">
-                        <img fadein-anim src="img/profile.webp" alt="Profile illustration" class="img-fluid">
-                    </div>
-                </div>
-
             </div>
             <div class="section skills">
                 <h2 class="hp">My Skills</h2>
+                <ul class="list">
+                    <li class="li">HTML</li>
+                    <li class="li">CSS</li>
+                    <li class="li">Javasript</li>
+                    <li class="li">React</li>
+                    <li class="li">JSX</li>
+                    <li class="li">UI Design</li>
+                    <li class="li">UX Design</li>
+                    <li class="li">Git</li>
+                    <li class="li">Github</li>
+                    <li class="li">Version Control</li>
+                    <li class="li">Django</li>
+                    <li class="li">NPM</li>
+                    <li class="li">GSAP</li>
+                    <li class="li">Bootstrap</li>
+                </ul>
+                <div class="conc text-center  text-nowrap"><a href="">See more ...</a></div>
+            </div>
+            <div class="section portfolio">
+                <h2 class="hp">Portfolio</h2>
+                <div id="portfolio" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#portfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#portfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#portfolio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#portfolio" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="2500">
+                        <div class="list">
+                          <h4>First slide label</h4>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2500">
+                        <div class="list">
+                          <h4>Second slide label</h4>
+                          <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2500">
+                        <div class="list">
+                          <h4>Third slide label</h4>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2500">
+                        <div class="list">
+                          <h4>fourth slide label</h4>
+                          <p>Some representative placeholder content for the fourth slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#portfolio" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#portfolio" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                <div class="conc text-center text-nowrap"><a href="">See more ...</a></div>
             </div>
         </main>
     </div>
@@ -90,8 +155,6 @@
         <div class="d-flex">
             <div class="box"></div>
         </div>
-        <button btn type-anim class="btn btn-primary">Click</button>
-        <button btn1 class="btn btn-primary">Click play</button>
     </training>
 
 
