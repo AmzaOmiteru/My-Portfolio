@@ -1,3 +1,2 @@
 # Redirects from what the browser requests to what we serve
-/home              /                                    200
-/page.html  /page                        200
+/index          /       200
