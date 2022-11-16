@@ -306,6 +306,9 @@ body{
 #portfolio{
     min-height: 70vh;
 }
+#portfolio .list{
+    display: flex;
+}
 .carousel-inner{
     display: flex;
     align-items: center;
