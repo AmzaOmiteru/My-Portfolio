@@ -8,23 +8,21 @@ body{
     background-color: #E9D79E;
     color: #00001a;
 }
+a{
+    color: currentColor;
+    text-decoration: none;
+    transition: color 0.5s;
+} 
+a:hover{
+    color: var(--primary);
+}
+
 /* Heading restyle */
 .h1, h1 {
     font-size: calc(1.375rem + 1.5vw);
 }
 .op{
     opacity: 0;
-}
-@keyframes intro {
-    0%{
-        opacity: 0;
-    }
-    75%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
 }
 .pg{
     min-height: 100vh;
@@ -214,7 +212,7 @@ body{
     transition: color 0.2s;
 }
 .offcanvas ul li a:focus, .offcanvas ul li a:active{
-    color: #018bc7;
+    color: #0bca77;
 }
 
 
@@ -254,6 +252,9 @@ body{
 /* Sections */
 .section{
     margin-top: 5vh;
+}
+.section h2{
+    font-weight: 600;
 }
 
 
@@ -308,6 +309,7 @@ body{
 }
 #portfolio .list{
     display: flex;
+    gap: 2rem;
 }
 #portfolio .web-img{
     max-width: 35%;
@@ -329,6 +331,7 @@ body{
     
     font-weight: 600;
 }
+
 .carousel-inner{
     display: flex;
     align-items: center;

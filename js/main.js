@@ -60,11 +60,11 @@ hh('.hero')
 // Reveal by letter animation
 const htext = new SplitType('.hp', { types: ['line', 'word', 'char'] })
 
-const hp = (parent, del)=>{
+const hp = (parent, trigger , del)=>{
     gsap.from(`${parent} .char`, {
         scrollTrigger: {
-            trigger: `${parent}`,
-            start: 'top 80%',
+            trigger: trigger,
+            start: 'top 75%',
             toggleActions: "play none none reverse",
         },
         duration: 1, 
@@ -74,9 +74,9 @@ const hp = (parent, del)=>{
         ease: "back.inOut(1.5)"
     });
 }
-hp('.hero', 0)
-hp('.skills h2', 0)
-hp('.portfolio h2', 0)
+hp('.hero', '.hero', 0)
+hp('.skills h2', "#skills", 0)
+hp('.portfolio h2', '#portfolio', 0)
 const offc = new SplitType('.offcanvas a', { types: ['line', 'word', 'char'] })
 document.querySelector('[navbtn]').onclick = ()=>{hp('.offcanvas', 0)}
 // end
