@@ -31,14 +31,18 @@ seeM.forEach((ele=>{bouncyA(ele)}))
 const fadeFB = (section, delay)=>{
     gsap.from(section, {
         duration:1,
-        scrollTrigger: section,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 75%',
+            toggleActions: "play none none reverse",
+        },
         opacity: 0,
         y: 50,
         delay: delay,
     })
 }
-fadeFB('.skills', 0)
-fadeFB('.portfolio', 0)
+fadeFB('#skills', 0)
+fadeFB('#portfolio', 0.5)
 
 
 // Reveal by word Animation
@@ -60,6 +64,8 @@ const hp = (parent, del)=>{
     gsap.from(`${parent} .char`, {
         scrollTrigger: {
             trigger: `${parent}`,
+            start: 'top 80%',
+            toggleActions: "play none none reverse",
         },
         duration: 1, 
         y: '5em',
@@ -68,7 +74,7 @@ const hp = (parent, del)=>{
         ease: "back.inOut(1.5)"
     });
 }
-hp('.hero', 0.7)
+hp('.hero', 0)
 hp('.skills h2', 0)
 hp('.portfolio h2', 0)
 const offc = new SplitType('.offcanvas a', { types: ['line', 'word', 'char'] })
@@ -104,7 +110,8 @@ document.querySelectorAll('.char').forEach(element => {
 
 
 // Stretchy Bouncy Animation for letters on hover
-const obj = new SplitType('[strb-anim]', {types:['char']})
+const obj1 = new SplitType('[strb-anim]', {types:['char']})
+
 const hq = document.querySelectorAll('[strb-anim] .char') 
 
 hq.forEach(element => {
@@ -113,7 +120,12 @@ hq.forEach(element => {
             keyframes:[
                 {
                     duration: 0.3,
-                    transform: 'scale(1.25, 0.75)',
+                    transform: 'scale(1.24, 0.74)',
+                    ease: "power4.in",
+                },
+                {
+                    duration: 0.05,
+                    transform: 'scale(1.26, 0.76)',
                     ease: "power4.in",
                 },
                 {

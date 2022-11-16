@@ -309,6 +309,26 @@ body{
 #portfolio .list{
     display: flex;
 }
+#portfolio .web-img{
+    max-width: 35%;
+    overflow: hidden;
+}
+#portfolio .web-img img{
+    transition: all 1s;
+}
+#portfolio .web-img img:hover{
+    transform: scale(1.2);
+    
+}
+#portfolio .web-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#portfolio .web-txt h4{
+    
+    font-weight: 600;
+}
 .carousel-inner{
     display: flex;
     align-items: center;
@@ -369,10 +389,17 @@ body{
 
     /* Portfolio section */
     .carousel-control-prev, .carousel-control-next{
-        display: none;
+        opacity: 0;
     }
     .carousel-inner{
         max-width: 85vw;
+    }
+    #portfolio .list{
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+    #portfolio .web-img{
+        max-width: 100%;
     }
 
 }
@@ -396,4 +423,10 @@ body{
     .carousel-inner{
         max-width: 95vw;
     }
+}
+
+
+/* Training Test */
+training .h-txt{
+    font-weight: 700;
 }
