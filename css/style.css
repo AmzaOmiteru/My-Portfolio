@@ -8,6 +8,9 @@ body{
     background-color: #E9D79E;
     color: #00001a;
 }
+main{
+    margin-bottom: 5rem;
+}
 a{
     color: currentColor;
     text-decoration: none;
@@ -282,6 +285,9 @@ body{
     background-color: #4b8007;
 }
 .conc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 5em;
     margin: 4rem;
 }
@@ -347,6 +353,30 @@ body{
     color: var(--secondary);
 }
 
+
+
+/* Contact-Me Section */
+.pack .input{
+    background-color: transparent;
+    width: fit-content;
+    min-width: 65%;
+    border: 1px solid #00001a;
+    border-radius: 1em;
+    transition: all 0.5s;
+    padding: 0.5em 1em;
+
+}
+.pack .input:hover{
+    border: 1px solid #4b8007;
+}
+.pack .input:focus, .pack .input:focus-within, .pack .input:focus-visible{
+    border: 1px solid #4b8007;
+    min-width: 80%;
+    outline: none;
+} 
+.pack label{
+    display: block;
+}
 
 @media (max-width: 1000px){
     /* nav */

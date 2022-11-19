@@ -43,6 +43,7 @@ const fadeFB = (section, delay)=>{
 }
 fadeFB('#skills', 0)
 fadeFB('#portfolio', 0.5)
+fadeFB('#contact-me', 0)
 
 
 // Reveal by word Animation
@@ -77,12 +78,13 @@ const hp = (parent, trigger , del)=>{
 hp('.hero', '.hero', 0)
 hp('.skills h2', "#skills", 0)
 hp('.portfolio h2', '#portfolio', 0)
+hp('.contact-me h2', '#contact-me', 0)
 const offc = new SplitType('.offcanvas a', { types: ['line', 'word', 'char'] })
 document.querySelector('[navbtn]').onclick = ()=>{hp('.offcanvas', 0)}
 // end
 
 // OnHover Animation
-document.querySelectorAll('.char').forEach(element => {
+document.querySelectorAll('.es .char').forEach(element => {
     
     
     element.onmouseenter = ()=>{
