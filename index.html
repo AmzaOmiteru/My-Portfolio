@@ -164,17 +164,30 @@
             <div class="section contact-me">
               <h2 class="hp es">Contact Me</h2>
               <div id="contact-me">
-                <form class="w-75" name="Contact-Me" netlify>
-                  <div class="pack row">
-                    <div class="col">
-                      <label for="name">Name</label>
-                      <input class="input" type="text" name="name" id="name">
-                    </div>
-                    <div class="col">
-                      <label for="subject">Subject</label>
-                      <input class="input" type="text" name="subject" id="subject">
-                    </div>
+                <form method="" class="" name="Contact-Me" netlify>
+                  <div class="pack">
+                    
+                    <label for="name">Name</label>
+                    <input required class="input" type="text" name="name" id="name" placeholder="e.g Amza Omiteru">
                   </div>
+                  <div class="pack">  
+                    
+                    <label for="email">Email</label>
+                    <input required class="input" type="email" name="email" id="email" placeholder="e.g amza.web@gmail.com">
+                    
+                  </div>
+                  <div class="pack">
+                    <label for="subject">Subject</label>
+                    <input required class="input" type="text" name="subject" id="subject" placeholder="e.g Job offer">
+                  </div>
+                  <div class="pack">
+                    <label for="message">How can I help you?</label>
+                    <textarea placeholder="e.g I want to hire you for a frontend developer role at company soso" required class="input" name="message" id="message" rows="5"></textarea>
+                  </div>
+                  <div id="submit">
+                    <button type="submit">Submit</button>
+                  </div>
+                
                 </form>
                 <div class="details">
                   

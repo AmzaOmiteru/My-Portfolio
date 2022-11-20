@@ -23,7 +23,9 @@ obj.onmouseleave = ()=>{
 }
 }
 const seeM = document.querySelectorAll('.conc a')
+const sbeM = document.querySelector('#submit button')
 seeM.forEach((ele=>{bouncyA(ele)}))
+bouncyA(sbeM)
 
 
 
@@ -47,15 +49,15 @@ fadeFB('#contact-me', 0)
 
 
 // Reveal by word Animation
-const hh = (parent)=>{
-    gsap.from('[rbword]', {
-        scrollTrigger: `${parent}`,
-        duration: 1, 
-        y: '5em',
-        stagger: 1
-    });
-}
-hh('.hero')
+// const hh = (parent)=>{
+//     gsap.from('[rbword]', {
+//         scrollTrigger: `${parent}`,
+//         duration: 1, 
+//         y: '5em',
+//         stagger: 1
+//     });
+// }
+// hh('.hero')
 // end
 
 // Reveal by letter animation
@@ -79,8 +81,25 @@ hp('.hero', '.hero', 0)
 hp('.skills h2', "#skills", 0)
 hp('.portfolio h2', '#portfolio', 0)
 hp('.contact-me h2', '#contact-me', 0)
+
+// offcanvas animation
 const offc = new SplitType('.offcanvas a', { types: ['line', 'word', 'char'] })
-document.querySelector('[navbtn]').onclick = ()=>{hp('.offcanvas', 0)}
+
+const offcA = gsap.from(`.offcanvas .char`, {
+    duration: 1, 
+    y: '5em',
+    stagger: 0.05,
+    delay: 0,
+    ease: "back.inOut(1.5)"
+});
+offcA.pause()
+document.querySelector('[navbtn]').onclick = ()=>{
+    offcA.play()
+}
+document.querySelector('.offcanvas .btn-close').onclick = ()=>{
+    offcA.restart()
+    offcA.pause()
+}
 // end
 
 // OnHover Animation

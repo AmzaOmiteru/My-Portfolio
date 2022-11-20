@@ -356,7 +356,15 @@ body{
 
 
 /* Contact-Me Section */
+#contact-me form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 75%;
+}
+
 .pack .input{
+    color: #00001a;
     background-color: transparent;
     width: fit-content;
     min-width: 65%;
@@ -369,6 +377,9 @@ body{
 .pack .input:hover{
     border: 1px solid #4b8007;
 }
+.pack .input::placeholder{
+    color: #799356;
+}
 .pack .input:focus, .pack .input:focus-within, .pack .input:focus-visible{
     border: 1px solid #4b8007;
     min-width: 80%;
@@ -376,6 +387,27 @@ body{
 } 
 .pack label{
     display: block;
+}
+#submit button{
+    color: #00001a;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00001a;
+    border-radius: 1rem;
+    transition: color 0.2s, border 0.2s;
+}
+#submit button:hover{
+    border-color: #4b8007;
+    color: #4b8007;
+}
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5rem;
+    max-width: 75%;
 }
 
 @media (max-width: 1000px){
@@ -433,6 +465,21 @@ body{
     }
     #portfolio .web-img{
         max-width: 100%;
+    }
+
+    /* Contact Me Section */
+    #contact-me form{
+        align-items: center;
+        max-width: 100%;
+    }    
+    .pack{
+        width: 100%;
+    }
+    .pack .input:focus, .pack .input:focus-within, .pack .input:focus-visible{
+        min-width: 100%;
+    }
+    .pack .input {
+        min-width: 85%;
     }
 
 }
